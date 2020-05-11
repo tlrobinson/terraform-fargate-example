@@ -3,9 +3,9 @@ variable "aws_region" {
   default     = "us-east-1"
 }
 
-variable "aws_account_id" {
-  description = "AWS account ID"
-}
+# variable "aws_account_id" {
+#   description = "AWS account ID"
+# }
 
 variable "az_count" {
   description = "Number of AZs to cover in a given AWS region"
@@ -14,12 +14,12 @@ variable "az_count" {
 
 variable "app_image" {
   description = "Docker image to run in the ECS cluster"
-  default     = "adongy/hostname-docker:latest"
+  default     = "tutum/hello-world"
 }
 
 variable "app_port" {
   description = "Port exposed by the docker image to redirect traffic to"
-  default     = 3000
+  default     = 80
 }
 
 variable "app_count" {
