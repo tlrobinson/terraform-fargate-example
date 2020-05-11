@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# USAGE: ecs-sh "/bin/true"
+
+set -eu
+
+AWS_DEFAULT_PROFILE=metabase ./ecs-run -c "tf-ecs-cluster" -d "app:1" -n "app" -m $1
